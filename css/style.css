@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+}
+
+.mainDiv {
+    width: 600px;
+    height: 600px;
+    background-color: cornflowerblue;
+    margin: 0 auto;
+}
+
+.mainDiv > div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.red {
+    background-color: red;
+    animation-name: red;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes red {
+    0% {top: -200px}
+    100% {top: 0}
+}
+
+.yellow {
+    background-color: yellow;
+    transition-property: transform;
+    transition-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.yellow:hover {
+    transform: rotateY(180deg);
+}
+
+.green {
+    background-color: green;
+    opacity: 0;
+    animation-name: green;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes green {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
